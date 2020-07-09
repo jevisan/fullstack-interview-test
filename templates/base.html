@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="{% static '/css/bulmaswatch.min.css' %}">
+    </head>
+    <body class="theme-page">
+        <section>
+            <nav class="main-nav navbar is-primary">
+                <div class="container">
+                    <div class="navbar-start">
+                        <a href="#" class="navbar-item">
+                            <h1 class="title is-5">GitManager</h1>
+                        </a>
+                    </div>
+                    <span class="navbar-toggle">
+                        <span></span>
+                    </span>
+                    <div class="navbar-end navbar-menu">
+
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <div class="columns">
+            <div class="column is-2">
+                <aside class="menu section">
+                    <p class="menu-label">Operations</p>
+                    <ul class="menu-list">
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="column">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

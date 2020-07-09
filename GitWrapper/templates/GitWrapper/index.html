@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section">
+    <h1 class="title">Git Wrapper</h1>
+    <hr>
+    <div class="content">
+        <h2>Specs</h2>
+        <div class="columns">
+            <div class="column">
+                <h4>Decription</h4>
+                <div class="box">
+                    <p>{{ repository.description }}</p>
+                </div>
+            </div>
+            <div class="column">
+                <h4>Active branch</h4>
+                <div class="box">
+                    <p>{{ repository.active_branch }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <h4>Remote List</h4>
+                <div class="box">
+                    <ul>
+                        {% for remote in repository.remotes %}
+                        <li>
+                            <b>{{ remote.name }}: </b>{{ remote.url }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
